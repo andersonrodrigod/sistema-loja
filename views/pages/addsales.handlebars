@@ -1,0 +1,57 @@
+<div class="add-sales-container">
+    <h1>Adicionar Venda</h1>
+    <div class="add-sales">
+        <form action="/sales/add" method="post">
+            <div class="data-field">
+                <label for="date">Data:</label>
+                <input type="date" name="date" required>
+            </div>
+            <div class="producer-field">
+                <label for="producer">Produtora</label>
+                <select name="producerselect">
+                {{#each producer}} 
+                    <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+                </select>
+            </div>
+            <div class="product-field">
+                <label for="product">Produto:</label>
+                <input type="text" name="product" required>
+            </div>
+            <div class="price-field">
+                <label for="price">Valor:</label>
+                <input type="number" name="price" step="any" oninput="formatCurrency(this)" required>
+            </div>
+            <div class="payment-field">
+                <label for="payment">Pagamento:</label>
+                <select name="payment" >
+                    <option value="dinheiro">A vista</option>
+                    <option value="cartão">Cartão</option>
+                </select>
+            </div>
+            <div class="description-field">
+                <label for="description">Observação:</label>
+                <textarea name="description"></textarea>
+            </div>
+            <div class="btn-submit">
+                <input type="submit" value="Enviar">  
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function formatCurrency(input) {
+        // Obtém o valor do campo
+        let value = input.value;
+
+        // Remove todos os caracteres não numéricos e o ponto decimal
+        value = value.replace(/[^\d]/g, '');
+
+        // Converte o valor para número
+        value = (parseFloat(value) / 100).toFixed(2);
+
+        // Define o valor formatado no campo
+        input.value = value;
+    }
+</script>

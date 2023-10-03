@@ -1,0 +1,14 @@
+{
+    "sales": [
+        {
+            "idsale": 2,
+            "idproducer": 2,
+            "day": 2,
+            "name": "Conserto Acertoos",
+            "product": "roupa",
+            "price": 35,
+            "payment": "cartão",
+            "description": "compra a débito"
+        }
+    ]
+}

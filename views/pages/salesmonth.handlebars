@@ -1,0 +1,37 @@
+<div class="container-info-vendas">
+    <h1>Ultimas Vendas de</h1>
+    <div class="info-vendas">
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Nome</th>
+                    <th>Produto</th>
+                    <th>Método de Pagamento</th>
+                    <th>Preço</th>
+                    <th>Desconto</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each dbInfo}}
+                <tr>
+                    <td>{{this.day}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.product}}</td>
+                    <td>{{this.payment}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.discountAmount}}</td>
+                    <td>
+                        <form action="/sales/salesyear/{{this.year}}/{{this.month}}" method="post">
+                            <input type="hidden" name="idsale" value="{{this.idsale}}">
+                            <input type="submit" value="Excluir">
+                        </form>
+                    </td>
+                </tr>
+            {{/each }}
+            
+            </tbody>
+        </table>
+    </div>
+</div>

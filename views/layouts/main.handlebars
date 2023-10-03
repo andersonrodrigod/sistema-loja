@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/painel">Produtoras</a></li>
+                <li><a href="/sales">Vendas</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        {{#if messages.message}}
+            <div class="messages">
+                <span>{{messages.message}}</span>
+            </div>
+        {{/if}}
+        {{#if message}}
+            <div class="messages">
+                <span>{{message}}</span>
+            </div>
+      {{/if}}
+        {{{body}}} 
+    </main>
+    <footer>
+        <div>
+            <p>Todos os direitos reservados a Rodrigo Rodrigues</p>
+        </div>
+    </footer>
+</body>
+</html>

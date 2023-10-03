@@ -1,0 +1,32 @@
+<div class="container-info-vendas">
+    <h1>Ultimas Vendas</h1>
+    <div class="info-vendas">
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Nome</th>
+                    <th>Produto</th>
+                    <th>Método de Pagamento</th>
+                    <th>Preço</th>
+                    <th>Desconto</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each dbInfo}}
+                <tr>
+                    <td>{{this.day}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.product}}</td>
+                    <td>{{this.payment}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.discountAmount}}</td>
+                </tr>
+            {{/each }}
+            </tbody>
+        </table>
+        <div class="total">
+            <span>Valor Total: {{total}}</span>
+        </div>
+    </div>
+</div>

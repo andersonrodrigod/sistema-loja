@@ -1,0 +1,19 @@
+{
+  "producers": [
+    {
+      "id": 1,
+      "firstname": "Maria",
+      "lastname": "liduina"
+    },
+    {
+      "id": 2,
+      "firstname": "Conserto",
+      "lastname": "Acertoos"
+    },
+    {
+      "id": 3,
+      "firstname": "teste",
+      "lastname": "teste"
+    }
+  ]
+}
