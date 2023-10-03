@@ -61,6 +61,6 @@ app.use((req, res, next) => {
 app.use('/', OrderRoutes)
 app.use('/', auth)
 
-app.listen(3000, () => {
-    console.log('app rodando na porta 3000')
+app.listen(80, () => {
+    console.log('app rodando na porta 80')
 })
