@@ -10,10 +10,16 @@
     <header>
         <nav>
             <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/painel">Produtoras</a></li>
-                <li><a href="/sales">Vendas</a></li>
-                <li><a href="/login">Login</a></li>
+                {{#if session.userid}}
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/painel">Produtoras</a></li>
+                    <li><a href="/sales">Vendas</a></li>
+                    <li><a href="/logout">Sair</a></li>
+                {{else}}
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/login">Login</a></li>
+                {{/if}}
+                
             </ul>
         </nav>
     </header>
